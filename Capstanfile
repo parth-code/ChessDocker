@@ -1,0 +1,8 @@
+base: cloudius/osv-openjdk8
+
+cmdline:
+./universal/stage/bin/chessvap
+
+build:
+
+files:

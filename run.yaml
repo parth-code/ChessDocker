@@ -1,0 +1,64 @@
+runtime: java
+
+config_set:
+
+  ################################################################
+  ### This is one configuration set (feel free to rename it).  ###
+  ################################################################
+  myconfig1:
+    # REQUIRED
+    # Fully classified name of the main class.
+    # Example value: main.Hello
+    main: /main.scala.CustomApplication
+
+    # OPTIONAL
+    # A list of paths where classes and other resources can be found.
+    # By default, the unikernel root "/" is added to the classpath.
+    # Example value: classpath:
+    #                   - /
+    #                   - /src
+    classpath:
+      - /
+
+    # OPTIONAL
+    # Initial and maximum JVM memory size.
+    # Example value: xms: 512m
+    # xms: <value>
+    # xmx: <value>
+
+    # OPTIONAL
+    # A list of JVM args.
+    # Example value: jvm_args:
+    #                   - -Djava.net.preferIPv4Stack=true
+    #                   - -Dhadoop.log.dir=/hdfs/logs
+    jvm_args:
+    #   -
+
+    # OPTIONAL
+    # A list of command line args used by the application.
+    # Example value: args:
+    #                   - argument1
+    #                   - argument2
+    args:
+    #   - <list>
+
+    # OPTIONAL
+    # Environment variables.
+    # A map of environment variables to be set when unikernel is run.
+    # Example value:  env:
+    #                    PORT: 8000
+    #                    HOSTNAME: www.myserver.org
+    env:PORT: 8080
+    #   <key>: <value>
+
+
+    # OPTIONAL
+    # Configuration to contextualize.
+    #base: "<package-name>:<config_set>"
+
+  # Add as many named configurations as you need
+
+# OPTIONAL
+# What config_set should be used as default.
+# This value can be overwritten with --runconfig argument.
+config_set_default: myconfig1
