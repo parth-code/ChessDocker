@@ -81,10 +81,6 @@ create package using
 run using 
 ~capstan run chess-spring -p qemu --boot default
 
-I was not able to test the capstan container because the qemu and kvm caused problems
- with the VMWare instance and I was out of time.
-
-
 To create jar for Docker, use
 ~sbt docker:publishLocal
 
