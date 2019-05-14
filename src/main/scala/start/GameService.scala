@@ -25,7 +25,7 @@ class GameService extends GameWrapper {
     //Storing object in map for another API
     gameObjectStoreService.storeinMap(playerName, game)
     game.nextMove()
-    val result:List[String] = username:: "Black" :: game.performComputerMove.toList.dropRight(1)
+    val result:List[String] = username::"White" :: game.performComputerMove.toList.dropRight(1)
     result
   }
 
