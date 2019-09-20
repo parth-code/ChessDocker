@@ -1,4 +1,4 @@
-#ChessDocker
+# ChessDocker
 #### This application provides Rest APIs to allow you to play against the chess AI. 
 The application can be run using either sbt or by containerising it with Docker/Capstan. 
 Method 1: Docker
