@@ -34,8 +34,7 @@ There are 2 ways to start:
 
 Send a move request and recieve back a json response of the same form. 
 If the end is achieved, then a end is sent by the machine through RestTemplate.
-If game is over on user side, the client is supposed to signal end of game. 
-
+If game is over on user side, the client is supposed to signal end of game.  
 > {
 >       "username": "clientA",
 >       "from_pos": "b2",
@@ -63,27 +62,20 @@ Send a end request and recieve back a end request with the opponent's name:
 
 To build the images, Capstan and Docker are required in your system.
 Install all necessary dependencies for the application
-
-To develop the jar, I've used SBT Native Packager.
-
-To create jar for Capstan, use 
-`sbt universal:stage`
-
+To develop the jar, I've used SBT Native Packager.  
+To create jar for Capstan, use  
+`sbt universal:stage`  
 Since I'm running the application in Windows and needed Linux for Capstan,
 take only the **/universal** folder from target, place it in a folder with **Capstanfile**
-and the **package.yaml** and **run.yaml** in a folder inside the **main** folder called **meta**. 
-
-create package using 
-`capstan package compose -p chess-spring`
-
-run using 
-`capstan run chess-spring -p qemu --boot default`
-
-To create jar for Docker, use
-`sbt docker:publishLocal`
-
-run the container using 
-`$docker run --rm -p8080:8080 <package_name>`
+and the **package.yaml** and **run.yaml** in a folder inside the **main** folder called **meta**.  
+create package using  
+`capstan package compose -p chess-spring`  
+run using  
+`capstan run chess-spring -p qemu --boot default`  
+To create jar for Docker, use  
+`sbt docker:publishLocal`  
+run the container using   
+`$docker run --rm -p8080:8080 <package_name>`  
 
 
 
